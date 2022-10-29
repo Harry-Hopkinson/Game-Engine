@@ -1,10 +1,7 @@
 #include <stdio.h>
-#include <SDL2/SDL.h>
 #include <iostream>
 
-
-SDL_Window * window = SDL_CreateWindow("Rendering Textures",
-        SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1000, 800, 0);
+#include <src/core/window/constants.hpp>
 
 int render(std::string renderPath)
 {
