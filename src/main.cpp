@@ -1,6 +1,7 @@
 #include <src/core/render/render.cpp>
 #include <src/core/controller/controller.cpp>
 #include <src/core/logger/logger.cpp>
+#include <src/core/audio/audio.cpp>
 
 #include <cstdlib>
 #include <iostream>
@@ -12,6 +13,7 @@ int main(int argv, char** args)
 {
     SDL_Init(SDL_INIT_VIDEO);
     render("images\\test.bmp");
+    playAudio();
     try {
         controller.run();
     } catch (const std::exception& error) {
