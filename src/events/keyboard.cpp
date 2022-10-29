@@ -1,15 +1,10 @@
 #include <iostream>
-#include <src/events/keyboard.hpp>
-#include <src/core/controller/controller.hpp>
+#include <SDL2/SDL.h>
 
 namespace Events {
   class Keyboard {
-    const Uint8 *state = SDL_GetKeyboardState(NULL);
-    void keyPressed(int key) {
-      
-    }
-    ~Keyboard() {
-      delete state;
-    }
+    void keyPressed(SDL_Event event) {
+        std::cout << SDL_GetKeyName(event) << std::endl;
+      }
   };
 }

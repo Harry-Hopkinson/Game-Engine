@@ -6,9 +6,10 @@
 #include <iostream>
 #include <stdexcept>
 
+Core::Controller controller;
+
 int main(int argv, char** args)
 {
-    Core::Controller controller;
     SDL_Init(SDL_INIT_VIDEO);
     render("images\\test.bmp");
     try {
