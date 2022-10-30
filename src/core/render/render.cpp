@@ -3,10 +3,8 @@
 
 #include <src/core/window/constants.hpp>
 
-int render(std::string renderPath)
+int render(std::string renderPath, SDL_Renderer* renderer)
 {
-    SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, 0);
-
     SDL_Surface * image = SDL_LoadBMP(renderPath.c_str());
     SDL_Texture * texture = SDL_CreateTextureFromSurface(renderer, image);
     SDL_RenderCopy(renderer, texture, NULL, NULL);
@@ -16,5 +14,13 @@ int render(std::string renderPath)
     SDL_FreeSurface(image);
     SDL_DestroyTexture(texture);
     SDL_DestroyRenderer(renderer);
+    return 0;
+}
+
+int removeRender(SDL_Renderer* renderer)
+{
+    SDL_DestroyRenderer(renderer);
+    renderer = NULL;
+    delete renderer;
     return 0;
 }

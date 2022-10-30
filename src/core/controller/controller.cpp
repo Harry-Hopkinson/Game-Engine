@@ -1,8 +1,9 @@
 #include <stdio.h>
+
 #include <src/core/controller/controller.hpp>
 #include <src/core/controller/constants.hpp>
 #include <src/events/keyboard.hpp>
-#include <src/core/audio/audio.cpp>
+
 
 namespace Core {
     void Controller::run() {
