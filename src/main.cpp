@@ -2,6 +2,7 @@
 #include <src/core/controller/controller.cpp>
 #include <src/core/logger/logger.cpp>
 #include <src/core/audio/audio.cpp>
+#include <src/core/text/text.cpp>
 
 #include <cstdlib>
 #include <iostream>

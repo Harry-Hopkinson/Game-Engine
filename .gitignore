@@ -31,4 +31,5 @@
 *.app
 
 SDL2
+SDL2_TTF
 .vscode
