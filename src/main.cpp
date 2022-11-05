@@ -1,6 +1,5 @@
 #include <src/core/render/render.cpp>
 #include <src/core/controller/controller.cpp>
-#include <src/core/logger/logger.cpp>
 #include <src/core/audio/audio.cpp>
 #include <src/core/text/text.cpp>
 
@@ -20,7 +19,7 @@ int main(int argv, char** args)
     try {
         controller.run();
     } catch (const std::exception& error) {
-        Logger::Log(error.what());
+        Logger::Error(error.what());
         return EXIT_FAILURE;
     }
     removeRender(renderer);
