@@ -5,5 +5,5 @@
 
 void playSound() 
 {
-  PlaySound(TEXT("audio\\music.wav"), NULL, SND_ASYNC);
+  PlaySound(TEXT("../audio\\music.wav"), NULL, SND_ASYNC);
 }

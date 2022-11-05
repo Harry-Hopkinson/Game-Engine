@@ -15,7 +15,7 @@ int main(int argv, char** args)
     SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, 0);
 
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
-    render("images\\test.bmp", renderer);
+    render("../images\\test.bmp", renderer);
     playSound();
     try {
         controller.run();

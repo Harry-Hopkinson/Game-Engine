@@ -4,7 +4,7 @@
 namespace Events {
   class Keyboard {
     void keyPressed(SDL_Event event) {
-        std::cout << SDL_GetKeyName(event) << std::endl;
+        std::cout << SDL_GetKeyName(event.key.keysym.sym) << "\n";
       }
   };
 }

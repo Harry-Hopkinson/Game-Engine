@@ -3,6 +3,6 @@
 
 namespace Logger {
   void Log(const std::string& message) {
-    std::cerr << message << std::endl;
+    std::cerr << message << "\n";
   }
 }
