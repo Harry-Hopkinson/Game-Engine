@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 
-#include <src/core/window/constants.hpp>
+#include <src/main.hpp>
 
 int render(std::string renderPath, SDL_Renderer* renderer)
 {
@@ -17,10 +17,11 @@ int render(std::string renderPath, SDL_Renderer* renderer)
     return 0;
 }
 
-int removeRender(SDL_Renderer* renderer)
+// remove the image from the screen
+// by making the renderer black
+
+void clearScreen(SDL_Renderer* renderer)
 {
-    SDL_DestroyRenderer(renderer);
-    renderer = NULL;
-    delete renderer;
-    return 0;
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderClear(renderer);
 }

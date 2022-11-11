@@ -3,12 +3,13 @@
 #include <src/core/controller/controller.hpp>
 #include <src/core/controller/constants.hpp>
 #include <src/events/keyboard.hpp>
-#include <src/events/mouse.cpp>
+#include <src/events/mouse.hpp>
+#include <src/core/render/render.cpp>
 
 
 namespace Core {
     void Controller::run() {
-      Events::Keyboard keyboard;
+      Keyboard keyboard;
       Events::Mouse mouse;
       while (!quit) {
           SDL_WaitEvent(&event);
